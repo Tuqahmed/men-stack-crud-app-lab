@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Food</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+    <h1>Create new Food</h1>
+
+    <form action="/food" method="post">
+        <label for="name">Name:</label>
+        <input required name="name" id="name" type="text">
+        <br>
+        <br>
+
+        <label for="description">Description</label>
+        <input required name="description" id="description" type="text">
+        <br>
+        <br>
+
+        <label for="price">Price</label>
+        <input name="price" id="price" type="number">
+        <br>
+        <br>
+
+        <label for="isAvailable">Available</label>
+        <input name="isAvailable" id="isAvailable" type="checkbox">
+        <br>
+        <br>
+
+        <button>Create Food</button>
+    </form>
+</body>
+</html>

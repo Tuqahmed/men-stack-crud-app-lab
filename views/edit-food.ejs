@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Food</title>
+</head>
+<body>
+    <h1>Edit Food</h1>
+
+    <form action="/food/<%= food._id %>?_method=PUT" method="post">
+        <label for="name">Name:</label>
+        <input value="<%= food.name %>" name="name" id="name" type="text">
+        <br>
+        <br>
+
+        <label for="description">Description:</label>
+        <input value="<%= food.description %>" name="description" id="description" type="text">
+        <br>
+        <br>
+
+        <label for="price">Price</label>
+        <input value="<%= food.price %>" name="price" id="price" type="number">
+        <br>
+        <br>
+
+        <label for="isAvailable">Available</label>
+        <input <% if(food.isAvailable){ %> checked <% } %> name="isAvailable" id="isAvailable" type="checkbox">
+        <br>
+        <br>
+
+        <button>Update Food</button>
+    </form>
+</body>
+</html>
